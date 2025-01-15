@@ -15,7 +15,7 @@
 
     <properties>
 
-        <mvn.shade.plugin.version>3.2.4</mvn.shade.plugin.version>
+        <mvn.shade.plugin.version>3.6.0</mvn.shade.plugin.version>
 
         <!-- 不会被打包的部分，scope 只能是 test 或 provide -->
         <junit.version>5.9.1</junit.version>

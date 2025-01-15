@@ -1,5 +1,5 @@
 # 基础镜像（支持 amd64 & arm64），based on Ubuntu 18.04.4 LTS
-FROM adoptopenjdk:8-jdk-hotspot
+FROM eclipse-temurin:17-jdk-alpine
 # 维护者
 MAINTAINER tengjiqi@gmail.com
 # 下载并安装 maven
@@ -10,6 +10,7 @@ RUN rm -rf /opt/powerjob-maven/conf/settings.xml
 COPY settings.xml /opt/powerjob-maven/conf/settings.xml
 # 设置 maven 环境变量（maven invoker 读取该变量调用 maven）
 ENV M2_HOME=/opt/powerjob-maven
+ENV PATH=$M2_HOME/bin:$PATH
 
 # 设置时区
 ENV TZ=Asia/Shanghai
